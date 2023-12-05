@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="fixed-header">
+
+ <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button onclick="searchProducts()">Search</button>
+  </div>
+
+
+  <div class="layout-switch">
+    <button onclick="switchLayout('grid')">Grid View</button>
+    <button onclick="switchLayout('list')">List View</button>
+  </div>
+</header>
+  <div id="productContainer" class="grid-view"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

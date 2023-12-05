@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right bottom, #873572, black);
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fixed-header .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.fixed-header input {
+  margin-right: 10px;
+}
+a {
+  display: inline-block;
+  color: lightgrey;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  white-space: nowrap;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.23);
+  color: white;
+  transform: scale(1.03);
+  text-decoration: none;
+}
+a:active {
+  transform: scale(0.98);
+}
+/* Add your styles for grid and list views here */
+
+/* Common styles for both views */
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+/* Common styles for both views */
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+/*.search-bar {
+  margin: 10px;
+}*/
+
+/* Grid view styles */
+.grid-view {
+    margin-top: 80px; /* Adjust margin to avoid overlapping with fixed header */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* List view styles */
+.list-view {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 580px;   /* Added style */
+  height: 215px;  /* Added style */
+  top: 143px;     /* Added style */
+  left: 351px;    /* Added style */
+  border: 1px solid; /* Added style */
+}
+.list-view .product-card img {
+  max-width: 100%;
+  height: auto;
+  width: 20;
+  margin-bottom: 10px; /* Add margin between products in the list view */
+}
+.highlight {
+  background-color: yellow;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .grid-view, .list-view {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
